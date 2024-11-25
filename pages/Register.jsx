@@ -25,10 +25,9 @@ const Register = () => {
     <>
       <PageTitle title="Create an account" />
 
-      <div className="relative w-screen h-dvh p-2 grid grid-cols-1 lg:grid-cols-2 lg:gap-2">
-        {/* Left Column */}
-        <div className="flex flex-col p-4">
-          <Link to="/" className="max-w-max mx-auto lg:mx-0">
+      <div className="custom-class">
+        <div className="custom-container">
+          <Link to="/" className="custom-link">
             <img
               src={logoLight}
               alt="phoenix logo"
