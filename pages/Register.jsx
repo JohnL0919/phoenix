@@ -6,7 +6,7 @@
 /**
  * Node modules
  */
-import { Link } from "react-router-dom";
+import { Link, Form } from "react-router-dom";
 
 /**
  * Components
@@ -41,6 +41,16 @@ const Register = () => {
               className=""
             />
           </Link>
+          <div className="">
+            <h2 className="">Create an Account</h2>
+
+            <p className="">
+              Register Today and Gain Access to Powerful Tools that will
+              Supercharge Your Ideas.
+            </p>
+
+            <Form method="POST" className=""></Form>
+          </div>
         </div>
       </div>
     </>
