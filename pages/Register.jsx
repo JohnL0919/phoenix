@@ -35,7 +35,7 @@ const Register = () => {
               className=""
             />
             <img
-              src={logoLight}
+              src={logoDark}
               alt="phoenix logo"
               width={133}
               height={24}
@@ -50,7 +50,31 @@ const Register = () => {
               Supercharge Your Ideas.
             </p>
 
-            <Form method="POST" className=""></Form>
+            <Form method="POST" className="">
+              <TextField
+                type="text"
+                name="name"
+                label="Full name"
+                placeholder="Full name"
+                required={true}
+                autoFocus={true}
+              />
+              <TextField
+                type="email"
+                name="email"
+                label="email"
+                placeholder="email"
+                required={true}
+              />
+
+              <TextField
+                type="password"
+                name="password"
+                label="Password"
+                placeholder="Enter Your Password"
+                required={true}
+              />
+            </Form>
           </div>
         </div>
       </div>
