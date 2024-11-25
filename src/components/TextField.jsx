@@ -10,30 +10,34 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const TextField = ({
-  classes,
+  classes = '',
   helperText,
   label,
   name,
   placeholder = '',
-  fieldClasses,
+  fieldClasses = '',
   ...rest
 }) => {
   return (
-    <div className=''>
-      <label
-        htmlFor=''
-        className=''
-      >
-        {label}
-      </label>
-
+    <div className={`text-field-wrapper ${classes}`}>
+      <label htmlFor={name}>{label}</label>
       <input
-        className=''
+        className={`text-field ${fieldClasses}`}
         id={name}
         placeholder={placeholder}
+        {...rest}
       />
+      {helperText && <p className='helper-text'> {helperText} </p>}
     </div>
   );
+};
+TextField.propTypes = {
+  classes: PropTypes.string,
+  helperText: PropTypes.string,
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  fieldClasses: PropTypes.string,
 };
 
 export default TextField;
