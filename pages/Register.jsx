@@ -13,69 +13,82 @@ import { Link, Form } from "react-router-dom";
  */
 import PageTitle from "../src/components/PageTitle";
 import TextField from "../src/components/TextField.jsx";
+import { Button } from "../src/components/Button.jsx";
 
 /**
  * Custom Modules
  */
-import { logoLight, logoDark } from "../src/assets/assets.js";
+import { logoLight, logoDark, banner } from "../src/assets/assets.js";
 
 const Register = () => {
   return (
     <>
       <PageTitle title="Create an account" />
 
-      <div className="">
-        <div className="">
-          <Link>
+      <div className="relative w-screen h-dvh p-2 grid grid-cols-1 lg:grid-cols-2 lg:gap-2">
+        {/* Left Column */}
+        <div className="flex flex-col p-4">
+          <Link to="/" className="max-w-max mx-auto lg:mx-0">
             <img
               src={logoLight}
               alt="phoenix logo"
               width={133}
               height={24}
-              className=""
+              className="dark:hidden"
             />
             <img
               src={logoDark}
               alt="phoenix logo"
               width={133}
               height={24}
-              className=""
+              className="hidden dark:block"
             />
           </Link>
-          <div className="">
-            <h2 className="">Create an Account</h2>
 
-            <p className="">
+          <div>
+            <h2>Create an Account</h2>
+            <p>
               Register Today and Gain Access to Powerful Tools that will
               Supercharge Your Ideas.
             </p>
 
-            <Form method="POST" className="">
+            <Form method="POST">
               <TextField
                 type="text"
                 name="name"
                 label="Full name"
                 placeholder="Full name"
-                required={true}
-                autoFocus={true}
+                required
+                autoFocus
               />
               <TextField
                 type="email"
                 name="email"
-                label="email"
-                placeholder="email"
-                required={true}
+                label="Email"
+                placeholder="Email"
+                required
               />
-
               <TextField
                 type="password"
                 name="password"
                 label="Password"
                 placeholder="Enter Your Password"
-                required={true}
+                required
               />
+              <Button type="submit">Create Account</Button>
             </Form>
+
+            <p>
+              Already have an Account? <Link to="/login">Sign in</Link>
+            </p>
           </div>
+
+          <p>&copy; 2024 John Lin. All rights reserved.</p>
+        </div>
+
+        <div className="">
+          <img src={banner} alt="Banner" className="img-cover" />
+          <p>Chat with Phoenix to Supercharge Your Ideas.</p>
         </div>
       </div>
     </>

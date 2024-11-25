@@ -3,8 +3,39 @@
  * @license Apache-2.0
  */
 
-const Button = () => {
-  return <div></div>;
+/**
+ * Node modules
+ */
+import PropTypes from 'prop-types';
+
+/**
+ * Common Button
+ */
+
+const Button = ({
+  classes = '',
+  variant = 'filled',
+  color = 'primary',
+  Children,
+  ...rest
+}) => {
+  return (
+    <button
+      className={'btn ${variant} ${color} ${classes} '}
+      {...rest}
+    >
+      {Children}
+
+      <div className='state-layer'></div>
+    </button>
+  );
 };
 
-export default Button;
+Button.propTypes = {
+  classes: PropTypes.string,
+  variant: PropTypes.string,
+  color: PropTypes.string,
+  children: PropTypes.any,
+};
+
+export { Button };
