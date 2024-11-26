@@ -1,6 +1,15 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config}*/
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./src/**/*.html",
+    "./src/**/*.jsx",
+    "./src/**/*.js",
+    "./public/**/*.html",
+    "./public/**/*.jsx",
+    "./public/**/*.js",
+    "./public/index.html",
+    "./src/**/*",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -182,11 +191,11 @@ export default {
           },
         ],
         displaySmall: [
-          "36px",
+          "36px", // The font size itself
           {
-            fontWeight: "400",
-            lineHeight: "44px",
-            letterSpacing: "0",
+            fontWeight: "400", // Font weight
+            lineHeight: "44px", // Line height
+            letterSpacing: "0", // Letter spacing
           },
         ],
         headlineLarge: [

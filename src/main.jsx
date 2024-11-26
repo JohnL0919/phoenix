@@ -5,12 +5,12 @@
 
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Router, RouterProvider } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
 
 /**
  * Custom modules
  */
-import router from './routers/routes';
+import router from './routers/routes'; // Ensure your 'router' is set up correctly in this file
 
 /**
  * CSS Link
@@ -20,6 +20,7 @@ import App from './App.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router} />{' '}
+    {/* Use RouterProvider with the 'router' object */}
   </StrictMode>,
 );

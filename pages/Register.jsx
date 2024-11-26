@@ -33,53 +33,56 @@ const Register = () => {
               alt="phoenix logo"
               width={133}
               height={24}
-              className="dark:hidden"
+              className="mx-auto light-visible max-w-max lg:mx-0"
             />
             <img
               src={logoDark}
               alt="phoenix logo"
               width={133}
               height={24}
-              className="hidden dark:block"
+              className="mx-auto dark-visible max-w-max lg:mx-0"
             />
           </Link>
+          <div className="flex flex-col gap-2 max-w-[480px] w-full mx-auto">
+            <div className="">
+              <h2 className="font-semibold text-center text-displaySmall text-light-onBackground dark:text-dark-onBackground">
+                Create an Account
+              </h2>
+              <p>
+                Register Today and Gain Access to Powerful Tools that will
+                Supercharge Your Ideas.
+              </p>
 
-          <div>
-            <h2>Create an Account</h2>
-            <p>
-              Register Today and Gain Access to Powerful Tools that will
-              Supercharge Your Ideas.
-            </p>
+              <Form method="POST">
+                <TextField
+                  type="text"
+                  name="name"
+                  label="Full name"
+                  placeholder="Full name"
+                  required
+                  autoFocus
+                />
+                <TextField
+                  type="email"
+                  name="email"
+                  label="Email"
+                  placeholder="Email"
+                  required
+                />
+                <TextField
+                  type="password"
+                  name="password"
+                  label="Password"
+                  placeholder="Enter Your Password"
+                  required
+                />
+                <Button type="submit">Create Account</Button>
+              </Form>
 
-            <Form method="POST">
-              <TextField
-                type="text"
-                name="name"
-                label="Full name"
-                placeholder="Full name"
-                required
-                autoFocus
-              />
-              <TextField
-                type="email"
-                name="email"
-                label="Email"
-                placeholder="Email"
-                required
-              />
-              <TextField
-                type="password"
-                name="password"
-                label="Password"
-                placeholder="Enter Your Password"
-                required
-              />
-              <Button type="submit">Create Account</Button>
-            </Form>
-
-            <p>
-              Already have an Account? <Link to="/login">Sign in</Link>
-            </p>
+              <p>
+                Already have an Account? <Link to="/login">Sign in</Link>
+              </p>
+            </div>
           </div>
 
           <p>&copy; 2024 John Lin. All rights reserved.</p>
