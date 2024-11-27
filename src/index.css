@@ -132,3 +132,9 @@
     display: block;
   }
 }
+.text-displaySmall {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 44px;
+  letter-spacing: 0;
+}
