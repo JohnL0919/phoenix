@@ -48,7 +48,7 @@ const Register = () => {
           </Link>
           <div className='flex flex-col gap-2 max-w-[480px] w-full mx-auto'>
             <div className=''>
-              <h2 className='p-10 font-semibold text-center bg-red-500 text-displaySmall text-light-onBackground dark:text-dark-onBackground'>
+              <h2 className='font-semibold text-center text-displaySmall text-light-onBackground dark:text-dark-onBackground'>
                 Create an Account
               </h2>
               <p>
