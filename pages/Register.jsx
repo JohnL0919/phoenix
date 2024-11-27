@@ -6,46 +6,49 @@
 /**
  * Node modules
  */
-import { Link, Form } from "react-router-dom";
+import { Link, Form } from 'react-router-dom';
 
 /**
  * Components
  */
-import PageTitle from "../src/components/PageTitle";
-import TextField from "../src/components/TextField.jsx";
-import { Button } from "../src/components/Button.jsx";
+import PageTitle from '../src/components/PageTitle';
+import TextField from '../src/components/TextField.jsx';
+import { Button } from '../src/components/Button.jsx';
 
 /**
  * Custom Modules
  */
-import { logoLight, logoDark, banner } from "../src/assets/assets.js";
+import { logoLight, logoDark, banner } from '../src/assets/assets.js';
 
 const Register = () => {
   return (
     <>
-      <PageTitle title="Create an account" />
+      <PageTitle title='Create an account' />
 
-      <div className="custom-class">
-        <div className="custom-container">
-          <Link to="/" className="custom-link">
+      <div className='custom-class'>
+        <div className='custom-container'>
+          <Link
+            to='/'
+            className='custom-link'
+          >
             <img
               src={logoLight}
-              alt="phoenix logo"
+              alt='phoenix logo'
               width={133}
               height={24}
-              className="mx-auto light-visible max-w-max lg:mx-0"
+              className='mx-auto light-visible max-w-max lg:mx-0'
             />
             <img
               src={logoDark}
-              alt="phoenix logo"
+              alt='phoenix logo'
               width={133}
               height={24}
-              className="mx-auto dark-visible max-w-max lg:mx-0"
+              className='mx-auto dark-visible max-w-max lg:mx-0'
             />
           </Link>
-          <div className="flex flex-col gap-2 max-w-[480px] w-full mx-auto">
-            <div className="">
-              <h2 className="font-semibold text-center text-displaySmall text-light-onBackground dark:text-dark-onBackground">
+          <div className='flex flex-col gap-2 max-w-[480px] w-full mx-auto'>
+            <div className=''>
+              <h2 className='p-10 font-semibold text-center bg-red-500 text-displaySmall text-light-onBackground dark:text-dark-onBackground'>
                 Create an Account
               </h2>
               <p>
@@ -53,34 +56,34 @@ const Register = () => {
                 Supercharge Your Ideas.
               </p>
 
-              <Form method="POST">
+              <Form method='POST'>
                 <TextField
-                  type="text"
-                  name="name"
-                  label="Full name"
-                  placeholder="Full name"
+                  type='text'
+                  name='name'
+                  label='Full name'
+                  placeholder='Full name'
                   required
                   autoFocus
                 />
                 <TextField
-                  type="email"
-                  name="email"
-                  label="Email"
-                  placeholder="Email"
+                  type='email'
+                  name='email'
+                  label='Email'
+                  placeholder='Email'
                   required
                 />
                 <TextField
-                  type="password"
-                  name="password"
-                  label="Password"
-                  placeholder="Enter Your Password"
+                  type='password'
+                  name='password'
+                  label='Password'
+                  placeholder='Enter Your Password'
                   required
                 />
-                <Button type="submit">Create Account</Button>
+                <Button type='submit'>Create Account</Button>
               </Form>
 
               <p>
-                Already have an Account? <Link to="/login">Sign in</Link>
+                Already have an Account? <Link to='/login'>Sign in</Link>
               </p>
             </div>
           </div>
@@ -88,8 +91,12 @@ const Register = () => {
           <p>&copy; 2024 John Lin. All rights reserved.</p>
         </div>
 
-        <div className="">
-          <img src={banner} alt="Banner" className="img-cover" />
+        <div className=''>
+          <img
+            src={banner}
+            alt='Banner'
+            className='img-cover'
+          />
           <p>Chat with Phoenix to Supercharge Your Ideas.</p>
         </div>
       </div>
