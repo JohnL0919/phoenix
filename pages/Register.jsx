@@ -51,7 +51,7 @@ const Register = () => {
               <h2 className='font-semibold text-center text-displaySmall text-light-onBackground dark:text-dark-onBackground'>
                 Create an Account
               </h2>
-              <p>
+              <p className='px-2 mt-1 mb-5 text-center text-bodyLarge text-light-onSurfaceVariant dark:text-dark-onSurfaceVariant'>
                 Register Today and Gain Access to Powerful Tools that will
                 Supercharge Your Ideas.
               </p>
