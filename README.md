@@ -1,4 +1,4 @@
-# Phoenix - My Portfolio Website !
+# Phoenix - An AI Chat Application !
 
 ### The Website Link: Coming Soon...
 
