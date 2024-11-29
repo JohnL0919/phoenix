@@ -56,7 +56,10 @@ const Register = () => {
                 Supercharge Your Ideas.
               </p>
 
-              <Form method='POST'>
+              <Form
+                method='POST'
+                className='grid grid-cols-1 gap-4'
+              >
                 <TextField
                   type='text'
                   name='name'

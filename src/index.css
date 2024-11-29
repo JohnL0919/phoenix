@@ -52,89 +52,39 @@
     dark:bg-dark-onBackground/15;
   }
 }
-/** 
-* Styling for Register.jsx
-**/
 
-.custom-class {
-  width: 100vw;
-  /* relative to the viewport width */
-  height: 100dvh;
-  /* relative to the viewport height */
-  padding: 0.5rem;
-  /* p-2 translates to padding of 0.5rem */
-  display: grid;
-  /* grid layout */
-  grid-template-columns: 1fr;
-  /* single column by default */
-  gap: 0.5rem;
-  /* lg:gap-2 translates to a 0.5rem gap */
-}
-
-@media (min-width: 768px) {
-  /* lg breakpoint */
-
-  .custom-class {
-    grid-template-columns: repeat(2, 1fr);
-    /* grid-cols-2 translates to two columns */
+/**
+* Components
+*/
+@layer components {
+  /**
+  * Text Field
+  */
+  .text-field-wrapper {
+    @apply relative;
   }
-}
 
-.custom-container {
-  display: flex;
-  flex-direction: column;
-  /* flex-col */
-  padding: 1rem;
-  /* p-4 translates to padding of 1rem */
-}
+  .text-field {
+    @apply ring-1
+    ring-light-outline
+    dark:ring-dark-outline
+    bg-inherit
+    text-light-onSurface
+    dark:text-dark-onSurface
+    caret-light-primary
+    dark:caret-dark-primary
+    h-14
+    px-4
+    rounded-extraSmall
+    transition-shadow
+    duration-short3
+    ease-linear
 
-.custom-link {
-  max-width: -moz-max-content;
-  max-width: max-content;
-  /* max-w-max */
-  margin-left: auto;
-  /* mx-auto */
-  margin-right: auto;
-  /* mx-auto */
-}
+  hover:ring-light-onSurface
+  hover:dark:ring-dark-onSurface
 
-@media (min-width: 768px) {
-  /* lg breakpoint */
-
-  .custom-link {
-    margin-left: 0;
-    /* lg:mx-0 */
-    margin-right: 0;
-    /* lg:mx-0 */
+    focus:ring-2
+  focus:ring-light-primary
+  focus:dark:ring-dark-primary;
   }
-}
-
-/* Light mode visible, hidden in dark mode */
-
-.light-visible {
-  display: block;
-}
-
-@media (prefers-color-scheme: dark) {
-  .light-visible {
-    display: none;
-  }
-}
-
-/* Dark mode visible, hidden in light mode */
-
-.dark-visible {
-  display: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  .dark-visible {
-    display: block;
-  }
-}
-.text-displaySmall {
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 44px;
-  letter-spacing: 0;
 }
