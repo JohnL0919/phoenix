@@ -96,4 +96,22 @@
   .text-field:focus::placeholder {
     @apply opacity-100;
   }
+
+  .label-text {
+    @apply absolute
+    text-labelLarge
+    top-[18px]
+    left-2
+    text-light-onSurfaceVariant
+    dark:text-dark-onSurfaceVariant
+    bg-light-background
+    dark:bg-dark-background
+    px-2
+    origin-[center_left]
+    pointer-events-none
+    select-none
+    transition-[color,transform]
+    duration-short4
+    ease-standard;
+  }
 }
