@@ -87,4 +87,13 @@
   focus:ring-light-primary
   focus:dark:ring-dark-primary;
   }
+
+  .text-field::placeholder {
+    @apply opacity-0
+    transition-opacity;
+  }
+
+  .text-field:focus::placeholder {
+    @apply opacity-100;
+  }
 }
