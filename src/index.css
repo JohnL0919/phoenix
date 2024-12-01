@@ -152,9 +152,7 @@
     duration-short3
     ease-standard
     
-    hover:shadow-elevation1
-    
-    focus:shadow-none;
+    hover:shadow-elevation5;
   }
 
   .btn.filled.primary {
@@ -162,5 +160,13 @@
     dark:bg-dark-primary
     text-light-onPrimary
     dark:text-dark-onPrimary;
+  }
+
+  .btn.filled.disabled {
+    @apply bg-light-onSurface/[0.12]
+    dark:bg-dark-onSurface/[0.12]
+    text-light-onSurface/[0.38]
+    dark:text-dark-onSurface/[0.38]
+    pointer-events-none;
   }
 }
