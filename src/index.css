@@ -114,4 +114,19 @@
     duration-short4
     ease-standard;
   }
+
+  .text-field-wrapper:hover .label-text {
+    @apply text-light-onSurface
+    dark:text-dark-onSurface;
+  }
+
+  .text-field-wrapper:focus-within .label-text,
+  .text-field-wrapper:has(.text-field:not(:placeholder-shown)) .label-text {
+    @apply translate-x-0.5 translate-y-7 scale-[0.85];
+  }
+
+  .text-field-wrapper:focus-within .label-text {
+    @apply text-light-primary
+    dark:text-dark-primary;
+  }
 }
