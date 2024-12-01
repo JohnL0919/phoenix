@@ -16,15 +16,15 @@ const Button = ({
   classes = '',
   variant = 'filled',
   color = 'primary',
-  Children,
+  children,
   ...rest
 }) => {
   return (
     <button
-      className={'btn ${variant} ${color} ${classes} '}
+      className={`btn ${variant} ${color} ${classes}`}
       {...rest}
     >
-      {Children}
+      {children}
 
       <div className='state-layer'></div>
     </button>
