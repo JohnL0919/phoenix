@@ -85,22 +85,32 @@ const Register = () => {
                 <Button type='submit'>Create Account</Button>
               </Form>
 
-              <p>
-                Already have an Account? <Link to='/login'>Sign in</Link>
+              <p className='mt-4 text-center text-bodyMedium text-light-onSurfaceVariant dark:text-dark-onSurfaceVariant'>
+                Already have an Account?{' '}
+                <Link
+                  to='/login'
+                  className='inline-block link ms-1 text-light-onSurface dark:text-dark-onSurface'
+                >
+                  Sign in
+                </Link>
               </p>
             </div>
           </div>
 
-          <p>&copy; 2024 John Lin. All rights reserved.</p>
+          <p className='mx-auto mt-auto text-light-onSurfaceVariant dark:text-dark-onSurfaceVariant text-bodyMedium lg:mx-0'>
+            &copy; 2024 John Lin. All rights reserved.
+          </p>
         </div>
 
-        <div className=''>
+        <div className='hidden lg:block lg:relative lg:rounded-lg img-box'>
           <img
             src={banner}
             alt='Banner'
             className='img-cover'
           />
-          <p>Chat with Phoenix to Supercharge Your Ideas.</p>
+          <p className='absolute z-10 font-semibold leading-tight bottom-10 left-12 right-12 text-displayLarge text-right text-light-onSurface drop-shadow-sm 2xl: text-[72px]'>
+            Chat with Phoenix to Supercharge Your Ideas.
+          </p>
         </div>
       </div>
     </>

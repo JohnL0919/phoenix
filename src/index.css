@@ -163,6 +163,12 @@
     dark:text-dark-onPrimary;
   }
 
+  @media (prefers-color-scheme: dark) {
+    .btn.filled.primary {
+      --state-layer-bg: theme('colors.dark.onPrimary');
+    }
+  }
+
   .btn.filled.disabled {
     @apply bg-light-onSurface/[0.12]
     dark:bg-dark-onSurface/[0.12]
@@ -194,11 +200,37 @@
   }
 
   :has(> .state-layer):hover > .state-layer {
-    @apply opactiy-[0.08];
+    @apply opacity-[0.08];
   }
 
   :has(> .state-layer):where(:focus, :focus-visible, :focus-within)
     > .state-layer {
     @apply opacity-[0.1];
+  }
+
+  /**
+  * Link
+  */
+  .link {
+    @apply transition-colors
+    duration-short3
+    ease-standard
+
+    hover:text-light-primary
+    hover:dark:text-dark-primary
+    hover:underline;
+  }
+}
+
+/**
+* utilities
+*/
+@layer utilities {
+  .img-box {
+    @apply bg-light-surfaceContainerHighest dark:bg-dark-surfaceContainerHighest overflow-hidden;
+  }
+
+  .img-cover {
+    @apply w-full h-full object-cover;
   }
 }
