@@ -25,11 +25,11 @@ const Register = () => {
     <>
       <PageTitle title='Create an account' />
 
-      <div className='custom-class'>
-        <div className='custom-container'>
+      <div className='relative w-screen h-dvh p-2 grid grid-cols-1 lg:grid-cols-[1fr,1.2fr] lg:gap-2'>
+        <div className='flex flex-col p-4'>
           <Link
             to='/'
-            className='custom-link'
+            className='mx-auto mb-auto max-w-max lg:mx-0'
           >
             <img
               src={logoLight}
@@ -102,11 +102,11 @@ const Register = () => {
           </p>
         </div>
 
-        <div className='hidden lg:block lg:relative lg:rounded-lg img-box'>
+        <div className='hidden overflow-hidden rounded-lg lg:block lg:relative img-box'>
           <img
             src={banner}
             alt='Banner'
-            className='img-cover'
+            className='img-cover w-[1250px] h-[1000px]'
           />
           <p className='absolute z-10 font-semibold leading-tight bottom-10 left-12 right-12 text-displayLarge text-right text-light-onSurface drop-shadow-sm 2xl: text-[72px]'>
             Chat with Phoenix to Supercharge Your Ideas.
