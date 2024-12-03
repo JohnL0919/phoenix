@@ -13,5 +13,10 @@ import { Client, Account } from 'appwrite';
  */
 const client = new Client();
 client
-  .setProject('674d31fd002fb3e390b6')
+  .setProject(import.meta.env.VITE_APPWRITE_PROJECT_ID)
   .setEndpoint('https://cloud.appwrite.io/v1');
+
+/**
+ * Initial appwrite account
+ */
+const accounts = new Account(client);
