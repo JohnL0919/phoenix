@@ -7,7 +7,6 @@
  * Node Modules
  */
 import PropTypes from 'prop-types';
-import React from 'react';
 
 const TextField = ({
   classes = '',
@@ -24,6 +23,7 @@ const TextField = ({
       <input
         className={`text-field ${fieldClasses}`}
         id={name}
+        name={name}
         placeholder={placeholder}
         {...rest}
       />

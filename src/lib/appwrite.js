@@ -19,4 +19,6 @@ client
 /**
  * Initial appwrite account
  */
-const accounts = new Account(client);
+const account = new Account(client);
+
+export { account };

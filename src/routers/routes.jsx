@@ -9,10 +9,15 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 /**
- * Componenets
+ * Components
  */
 import App from '../App.jsx';
 import Register from '../../pages/Register.jsx';
+
+/**
+ * Actions
+ */
+import registerAction from './actions/registerAction.js';
 
 /**
  * Router
@@ -25,6 +30,7 @@ const router = createBrowserRouter([
   {
     path: '/register',
     element: <Register />,
+    action: registerAction,
   },
 ]);
 
