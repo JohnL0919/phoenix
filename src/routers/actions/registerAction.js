@@ -14,9 +14,10 @@ import { account } from '../../lib/appwrite';
 const registerAction = async ({ request }) => {
   // Retrieve the form data from the incoming request
   const formData = await request.formData();
-  console.log(formData.get('name'));
-  console.log(formData.get('email'));
-  console.log(formData.get('password'));
+  try {
+    // Creates a new user account using the provided email, password, and name
+    await account.create();
+  } catch (err) {}
   return null;
 };
 
