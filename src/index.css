@@ -220,6 +220,25 @@
     hover:dark:text-dark-primary
     hover:underline;
   }
+
+  /**
+* progress
+*/
+  .circular-progress {
+    @apply border-4
+  border-current
+  dark:border-current
+  border-r-transparent
+  dark:border-r-transparent
+  w-12
+  h-12
+  rounded-full
+  animate-spin;
+  }
+  .circular-progress.small {
+    @apply border-[3px]
+  w-5 h-5;
+  }
 }
 
 /**

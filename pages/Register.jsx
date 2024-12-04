@@ -6,14 +6,15 @@
 /**
  * Node modules
  */
-import { Link, Form, useNavigation } from 'react-router-dom';
-
+import { Link, Form, useNavigation, useActionData } from 'react-router-dom';
+import { useEffect } from 'react';
 /**
  * Components
  */
 import PageTitle from '../src/components/PageTitle';
 import TextField from '../src/components/TextField.jsx';
 import { Button } from '../src/components/Button.jsx';
+import { CircularProgress } from '../src/components/Progress';
 
 /**
  * Custom Modules
@@ -22,8 +23,15 @@ import { logoLight, logoDark, banner } from '../src/assets/assets.js';
 import { use } from 'framer-motion/client';
 
 const Register = () => {
+  // Get error data from form submission using useActionData (likely from React Router)
+  const error = useActionData();
+  console.log(error);
   // Get navigation state e.g. loading/submitting etc
   const navigation = useNavigation();
+
+  useEffect(() => {
+    // Show snackbar with the provided error message
+  }, [error]);
 
   return (
     <>
@@ -90,9 +98,11 @@ const Register = () => {
                   type='submit'
                   disabled={navigation.state === 'submitting'}
                 >
-                  {navigation.state === 'submitting'
-                    ? 'Submitting...'
-                    : 'Create account'}
+                  {navigation.state === 'submitting' ? (
+                    <CircularProgress size='small' />
+                  ) : (
+                    'Create account'
+                  )}
                 </Button>
               </Form>
 
