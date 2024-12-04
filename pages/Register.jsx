@@ -6,7 +6,7 @@
 /**
  * Node modules
  */
-import { Link, Form } from 'react-router-dom';
+import { Link, Form, useNavigation } from 'react-router-dom';
 
 /**
  * Components
@@ -19,8 +19,12 @@ import { Button } from '../src/components/Button.jsx';
  * Custom Modules
  */
 import { logoLight, logoDark, banner } from '../src/assets/assets.js';
+import { use } from 'framer-motion/client';
 
 const Register = () => {
+  // Get navigation state e.g. loading/submitting etc
+  const navigation = useNavigation();
+
   return (
     <>
       <PageTitle title='Create an account' />
@@ -82,7 +86,14 @@ const Register = () => {
                   placeholder='Enter Your Password'
                   required
                 />
-                <Button type='submit'>Create Account</Button>
+                <Button
+                  type='submit'
+                  disabled={navigation.state === 'submitting'}
+                >
+                  {navigation.state === 'submitting'
+                    ? 'Submitting...'
+                    : 'Create account'}
+                </Button>
               </Form>
 
               <p className='mt-4 text-center text-bodyMedium text-light-onSurfaceVariant dark:text-dark-onSurfaceVariant'>

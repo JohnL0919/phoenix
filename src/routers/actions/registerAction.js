@@ -4,6 +4,11 @@
  */
 
 /**
+ * Node modules
+ */
+import { redirect } from 'react-router-dom';
+
+/**
  * Custom modules
  */
 import { account } from '../../lib/appwrite';
@@ -28,7 +33,19 @@ const registerAction = async ({ request }) => {
       message: err.message, //Error message from the caught error.
     };
   }
-  return null;
+
+  try {
+    // Creates a session for the new user with the provided email and password
+    await account.createEmailSession(
+      formData.get('email'),
+      formData.get('password'),
+    );
+  } catch (err) {
+    // Logs any error encountered during session creation and redirects to login page
+    console.log(`Error Creating Email Session: ${err.message}`);
+    return redirect('/');
+  }
+  return redirect('/');
 };
 
 export default registerAction;
