@@ -239,6 +239,34 @@
     @apply border-[3px]
   w-5 h-5;
   }
+
+  /**
+* Snackbar
+*/
+  .snackbar {
+    @apply fixed
+  bottom-4 right-4 
+  bg-light-inverseSurface
+  dark:bg-dark-inverseSurface
+  text-light-inverseOnSurface
+  dark:text-dark-inverseOnSurface
+  text-bodyMedium
+  shadow-elevation3
+  rounded-extraSmall
+  min-h-12
+  max-w-[60ch]
+  min-w-[36ch]
+  px-4
+  py-[14px]
+  origin-bottom
+  z-40
+  
+  /* Response for small screen */
+  sm:left-6
+  sm:right-auto
+  sm:bottom-6
+  sm:w-max;
+  }
 }
 
 /**
