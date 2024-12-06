@@ -8,6 +8,12 @@
  */
 import { Link, Form, useNavigation, useActionData } from 'react-router-dom';
 import { useEffect } from 'react';
+
+/**
+ * Custom hooks
+ */
+import { useSnackbar } from '../src/hooks/useSnackbar.js';
+
 /**
  * Components
  */
@@ -17,7 +23,7 @@ import { Button } from '../src/components/Button.jsx';
 import { CircularProgress } from '../src/components/Progress';
 
 /**
- * Custom Modules
+ * Assets
  */
 import { logoLight, logoDark, banner } from '../src/assets/assets.js';
 import { use } from 'framer-motion/client';
@@ -29,9 +35,14 @@ const Register = () => {
   // Get navigation state e.g. loading/submitting etc
   const navigation = useNavigation();
 
+  const { showSnackbar } = useSnackbar();
+
   useEffect(() => {
     // Show snackbar with the provided error message
-  }, [error]);
+    if (error?.message) {
+      showSnackbar({ message: error.message, type: 'error' });
+    }
+  }, [error, showSnackbar]);
 
   return (
     <>
