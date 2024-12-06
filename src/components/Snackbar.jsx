@@ -8,10 +8,20 @@
  */
 import PropTypes from 'prop-types';
 
-const Snackbar = () => {
+const Snackbar = ({ snackbar }) => {
   return (
-    <div className=''>
-      <span className=''></span>
-    </div>
+    <>
+      {snackbar.open && (
+        <div className={'snackbar ${snackbar.type}'}>
+          <span>{snackbar.message}</span>
+        </div>
+      )}
+    </>
   );
 };
+
+Snackbar.propTypes = {
+  snackbar: PropTypes.object,
+};
+
+export default Snackbar;
