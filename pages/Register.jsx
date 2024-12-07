@@ -43,7 +43,6 @@ const Register = () => {
       showSnackbar({
         message: error.message,
         type: 'error',
-        timeOut: 500000000,
       });
     }
   }, [error, showSnackbar]);

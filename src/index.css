@@ -245,7 +245,7 @@
 */
   .snackbar {
     @apply fixed
-  bottom-4 right-4 
+  bottom-5
   bg-light-inverseSurface
   dark:bg-dark-inverseSurface
   text-light-inverseOnSurface
@@ -266,6 +266,11 @@
   sm:right-auto
   sm:bottom-6
   sm:w-max;
+  }
+
+  .snackbar.error {
+    @apply bg-light-errorContainer 
+    text-light-onErrorContainer;
   }
 }
 

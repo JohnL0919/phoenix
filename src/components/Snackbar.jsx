@@ -7,14 +7,15 @@
  * Node modules
  */
 import PropTypes from 'prop-types';
+import { motion } from 'motion/react';
 
 const Snackbar = ({ snackbar }) => {
   return (
     <>
       {snackbar.open && (
-        <div className={'snackbar ${snackbar.type}'}>
-          <span>{snackbar.message}</span>
-        </div>
+        <motion.div  variants={} className={'snackbar ${snackbar.type}'}>
+          <motion.span>{snackbar.message}</motion.span>
+        </motion.div>
       )}
     </>
   );
