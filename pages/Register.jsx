@@ -26,7 +26,6 @@ import { CircularProgress } from '../src/components/Progress';
  * Assets
  */
 import { logoLight, logoDark, banner } from '../src/assets/assets.js';
-import { use } from 'framer-motion/client';
 
 const Register = () => {
   // Get error data from form submission using useActionData (likely from React Router)

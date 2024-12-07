@@ -7,14 +7,38 @@
  * Node modules
  */
 import PropTypes from 'prop-types';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 const Snackbar = ({ snackbar }) => {
+  // Defines Framer Motion variants for a snackbar animation.
+  const snackbarVariant = {
+    hidden: { scaleY: 0 },
+    visible: {
+      scaleY: 1,
+      transition: {
+        duration: 0.2,
+        ease: [0.05, 0.7, 0.1, 1],
+      },
+    },
+  };
+
+  const snackbarChildVariant = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   return (
     <>
       {snackbar.open && (
-        <motion.div  variants={} className={'snackbar ${snackbar.type}'}>
-          <motion.span>{snackbar.message}</motion.span>
+        <motion.div
+          variants={snackbarVariant}
+          initial='hidden'
+          animate='visible'
+          className={`snackbar ${snackbar.type}`}
+        >
+          <motion.span variants={snackbarChildVariant}>
+            {snackbar.message}
+          </motion.span>
         </motion.div>
       )}
     </>
