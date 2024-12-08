@@ -8,6 +8,11 @@
  * BASE
  */
 @layer base {
+  @media (max-width: 1023px) {
+    .hide-below-lg {
+      display: none;
+    }
+  }
   a,
   img,
   button {

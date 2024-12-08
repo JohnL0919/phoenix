@@ -136,13 +136,13 @@ const Register = () => {
           </p>
         </div>
 
-        <div className='hidden overflow-hidden rounded-lg lg:block lg:relative img-box'>
+        <div className='relative overflow-hidden rounded-lg img-box'>
           <img
             src={banner}
             alt='Banner'
             className='img-cover w-[1250px] h-[1000px]'
           />
-          <p className='absolute z-10 font-semibold leading-tight bottom-10 left-12 right-12 text-displayLarge text-right text-light-onSurface drop-shadow-sm 2xl: text-[72px]'>
+          <p className=' lg:block absolute z-10 font-semibold leading-tight bottom-10 left-12 right-12 text-displayLarge text-right text-light-onSurface drop-shadow-sm text-[72px]'>
             Chat with Phoenix to Supercharge Your Ideas.
           </p>
         </div>
