@@ -8,6 +8,7 @@
  */
 import { Link, Form, useNavigation, useActionData } from 'react-router-dom';
 import { useEffect } from 'react';
+import { AnimatePresence } from 'framer-motion';
 
 /**
  * Custom hooks
@@ -20,7 +21,7 @@ import { useSnackbar } from '../src/hooks/useSnackbar.js';
 import PageTitle from '../src/components/PageTitle';
 import TextField from '../src/components/TextField.jsx';
 import { Button } from '../src/components/Button.jsx';
-import { CircularProgress } from '../src/components/Progress';
+import { CircularProgress, LinearProgress } from '../src/components/Progress';
 
 /**
  * Assets
@@ -147,6 +148,11 @@ const Register = () => {
           </p>
         </div>
       </div>
+      <AnimatePresence>
+        {navigation.state === 'loading' && (
+          <LinearProgress classes='aboslute top-0 left-0 right-0' />
+        )}
+      </AnimatePresence>
     </>
   );
 };
