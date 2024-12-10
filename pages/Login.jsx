@@ -28,7 +28,7 @@ import { CircularProgress, LinearProgress } from '../src/components/Progress';
  */
 import { logoLight, logoDark, banner } from '../src/assets/assets.js';
 
-const Register = () => {
+const Login = () => {
   // Get error data from form submission using useActionData (likely from React Router)
   const error = useActionData();
   console.log(error);
@@ -49,7 +49,7 @@ const Register = () => {
 
   return (
     <>
-      <PageTitle title='Create an account' />
+      <PageTitle title='Login' />
 
       <div className='relative w-screen h-dvh p-2 grid grid-cols-1 lg:grid-cols-[1fr,1.2fr] lg:gap-2'>
         <div className='flex flex-col p-4'>
@@ -75,11 +75,10 @@ const Register = () => {
           <div className='flex flex-col gap-2 max-w-[480px] w-full mx-auto'>
             <div className=''>
               <h2 className='font-semibold text-center text-displaySmall text-light-onBackground dark:text-dark-onBackground'>
-                Create an Account
+                Welcome Back to Phoenix
               </h2>
               <p className='px-2 mt-1 mb-5 text-center text-bodyLarge text-light-onSurfaceVariant dark:text-dark-onSurfaceVariant'>
-                Register Today and Gain Access to Powerful Tools that will
-                Supercharge Your Ideas.
+                Enter Your Phoenix Account Details.
               </p>
 
               <Form
@@ -87,19 +86,12 @@ const Register = () => {
                 className='grid grid-cols-1 gap-4'
               >
                 <TextField
-                  type='text'
-                  name='name'
-                  label='Full name'
-                  placeholder='Full name'
-                  required
-                  autoFocus
-                />
-                <TextField
                   type='email'
                   name='email'
                   label='Email'
                   placeholder='Email'
                   required
+                  autoFocus={true}
                 />
                 <TextField
                   type='password'
@@ -108,6 +100,14 @@ const Register = () => {
                   placeholder='Enter Your Password'
                   required
                 />
+                <div className='text-right'>
+                  <Link
+                    to='/reset-link'
+                    className='inline-block link text-labelLarge'
+                  >
+                    Forgot Password?
+                  </Link>
+                </div>
                 <Button
                   type='submit'
                   disabled={navigation.state === 'submitting'}
@@ -115,18 +115,18 @@ const Register = () => {
                   {navigation.state === 'submitting' ? (
                     <CircularProgress size='small' />
                   ) : (
-                    'Create account'
+                    'Sign in'
                   )}
                 </Button>
               </Form>
 
               <p className='mt-4 text-center text-bodyMedium text-light-onSurfaceVariant dark:text-dark-onSurfaceVariant'>
-                Already have an Account?{' '}
+                Don&apos;t Have an Account?
                 <Link
-                  to='/login'
-                  className='inline-block text-labelLarge link ms-1 text-light-onSurface dark:text-dark-onSurface'
+                  to='/register'
+                  className='inline-block link ms-1 text-labelLarge text-light-onSurface dark:text-dark-onSurface'
                 >
-                  Sign in
+                  Create an Account
                 </Link>
               </p>
             </div>
@@ -157,4 +157,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;

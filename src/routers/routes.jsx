@@ -13,6 +13,7 @@ import { createBrowserRouter } from 'react-router-dom';
  */
 import App from '../App.jsx';
 import Register from '../../pages/Register.jsx';
+import Login from '../../pages/Login.jsx';
 
 /**
  * Actions
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
     path: '/register',
     element: <Register />,
     action: registerAction,
+  },
+  {
+    path: '/login',
+    element: <Login />,
   },
 ]);
 
