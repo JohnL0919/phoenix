@@ -19,6 +19,7 @@ import Login from '../../pages/Login.jsx';
  * Actions
  */
 import registerAction from './actions/registerAction.js';
+import loginAction from './actions/loginAction.js';
 
 /**
  * Router
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Login />,
+    action: loginAction,
   },
 ]);
 
