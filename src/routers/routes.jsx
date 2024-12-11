@@ -16,6 +16,11 @@ import Register from '../../pages/Register.jsx';
 import Login from '../../pages/Login.jsx';
 
 /**
+ * Loaders
+ */
+import registerLoader from './loaders/registerLoader.js';
+
+/**
  * Actions
  */
 import registerAction from './actions/registerAction.js';
@@ -32,6 +37,7 @@ const router = createBrowserRouter([
   {
     path: '/register',
     element: <Register />,
+    loader: registerLoader,
     action: registerAction,
   },
   {

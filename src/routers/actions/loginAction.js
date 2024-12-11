@@ -16,12 +16,13 @@ import { Account } from 'appwrite';
 /**
  * Handle the login action
  */
-const loginAction = async () => {
+const loginAction = async ({ request }) => {
   // Retrieve the form data from the incoming request
   const formData = await request.formData();
 
   try {
     // Attempt to create a session using email and password from the form data
+
     await account.createEmailPasswordSession(
       formData.get('email'),
       formData.get('password'),
