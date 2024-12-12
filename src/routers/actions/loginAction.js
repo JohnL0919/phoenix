@@ -11,7 +11,7 @@ import { redirect } from 'react-router-dom';
 /**
  * Custom Modules
  */
-import { Account } from 'appwrite';
+import { account } from '../../lib/appwrite';
 
 /**
  * Handle the login action
