@@ -16,8 +16,7 @@ import { account } from '../../lib/appwrite';
 const registerLoader = async () => {
   try {
     //Attempt to retrieve the user's account information
-    const user = await account.get();
-    console.log(user);
+    await account.get();
   } catch (err) {
     console.log('Error getting user session: ${err.message}');
     return null;
