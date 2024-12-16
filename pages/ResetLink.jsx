@@ -28,10 +28,10 @@ import { CircularProgress, LinearProgress } from '../src/components/Progress';
  */
 import { logoLight, logoDark, banner } from '../src/assets/assets.js';
 
-const Login = () => {
+const ResetLink = () => {
   // Get error data from form submission using useActionData (likely from React Router)
-  const error = useActionData();
-  console.log(error);
+  const actionData = useActionData();
+  console.log(actionData);
   // Get navigation state e.g. loading/submitting etc
   const navigation = useNavigation();
 
@@ -39,17 +39,18 @@ const Login = () => {
 
   useEffect(() => {
     // Show snackbar with the provided error message
-    if (error?.message) {
+    if (actionData) {
       showSnackbar({
-        message: error.message,
-        type: 'error',
+        message: actionData.message,
+        type: actionData.ok ? 'info' : 'error',
+        timeOut: 8000,
       });
     }
-  }, [error, showSnackbar]);
+  }, [actionData, showSnackbar]);
 
   return (
     <>
-      <PageTitle title='Login' />
+      <PageTitle title='Reset password' />
 
       <div className='relative w-screen h-dvh p-2 grid grid-cols-1 lg:grid-cols-[1fr,1.2fr] lg:gap-2'>
         <div className='flex flex-col p-4'>
@@ -75,10 +76,10 @@ const Login = () => {
           <div className='flex flex-col gap-2 max-w-[480px] w-full mx-auto'>
             <div className=''>
               <h2 className='font-semibold text-center text-displaySmall text-light-onBackground dark:text-dark-onBackground'>
-                Welcome Back to Phoenix
+                Forgot your password?
               </h2>
               <p className='px-2 mt-1 mb-5 text-center text-bodyLarge text-light-onSurfaceVariant dark:text-dark-onSurfaceVariant'>
-                Enter Your Phoenix Account Details.
+                Enter your email, and we&apos;ll send a password reset link.
               </p>
 
               <Form
@@ -157,4 +158,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ResetLink;

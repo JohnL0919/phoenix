@@ -14,6 +14,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from '../App.jsx';
 import Register from '../../pages/Register.jsx';
 import Login from '../../pages/Login.jsx';
+import ResetLink from '../../pages/ResetLink.jsx';
 
 /**
  * Loaders
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
     element: <Login />,
     loader: loginLoader,
     action: loginAction,
+  },
+  {
+    path: '/reset-link',
+    element: <ResetLink />,
   },
 ]);
 
