@@ -91,24 +91,11 @@ const ResetLink = () => {
                   name='email'
                   label='Email'
                   placeholder='Email'
+                  helperText='The verification link will be valid for 1 hour.'
                   required
                   autoFocus={true}
                 />
-                <TextField
-                  type='password'
-                  name='password'
-                  label='Password'
-                  placeholder='Enter Your Password'
-                  required
-                />
-                <div className='text-right'>
-                  <Link
-                    to='/reset-link'
-                    className='inline-block link text-labelLarge'
-                  >
-                    Forgot Password?
-                  </Link>
-                </div>
+
                 <Button
                   type='submit'
                   disabled={navigation.state === 'submitting'}
@@ -116,20 +103,10 @@ const ResetLink = () => {
                   {navigation.state === 'submitting' ? (
                     <CircularProgress size='small' />
                   ) : (
-                    'Sign in'
+                    'Get link'
                   )}
                 </Button>
               </Form>
-
-              <p className='mt-4 text-center text-bodyMedium text-light-onSurfaceVariant dark:text-dark-onSurfaceVariant'>
-                Don&apos;t Have an Account?
-                <Link
-                  to='/register'
-                  className='inline-block link ms-1 text-labelLarge text-light-onSurface dark:text-dark-onSurface'
-                >
-                  Create an Account
-                </Link>
-              </p>
             </div>
           </div>
 
