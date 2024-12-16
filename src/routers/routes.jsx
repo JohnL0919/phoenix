@@ -27,6 +27,7 @@ import loginLoader from './loaders/loginLoader.js';
  */
 import registerAction from './actions/registerAction.js';
 import loginAction from './actions/loginAction.js';
+import resetLinkAction from './actions/resetLinkAction.js';
 
 /**
  * Router
