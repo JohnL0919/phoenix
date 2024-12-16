@@ -15,6 +15,7 @@ import App from '../App.jsx';
 import Register from '../../pages/Register.jsx';
 import Login from '../../pages/Login.jsx';
 import ResetLink from '../../pages/ResetLink.jsx';
+import ResetPassword from '../../pages/ResetPassword.jsx';
 
 /**
  * Loaders
@@ -52,6 +53,11 @@ const router = createBrowserRouter([
   {
     path: '/reset-link',
     element: <ResetLink />,
+    action: resetLinkAction,
+  },
+  {
+    path: '/reset-password',
+    element: <ResetPassword />,
   },
 ]);
 
