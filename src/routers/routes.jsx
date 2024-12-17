@@ -22,6 +22,8 @@ import ResetPassword from '../../pages/ResetPassword.jsx';
  */
 import registerLoader from './loaders/registerLoader.js';
 import loginLoader from './loaders/loginLoader.js';
+import resetLinkLoader from './loaders/resetLinkLoader.js';
+import resetPasswordLoader from './loaders/resetPasswordLoader.js';
 
 /**
  * Actions
@@ -54,11 +56,13 @@ const router = createBrowserRouter([
   {
     path: '/reset-link',
     element: <ResetLink />,
+    loader: resetLinkLoader,
     action: resetLinkAction,
   },
   {
     path: '/reset-password',
     element: <ResetPassword />,
+    loader: resetPasswordLoader,
     action: resetPasswordAction,
   },
 ]);
