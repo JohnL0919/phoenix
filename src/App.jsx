@@ -1,16 +1,25 @@
+/**
+ * @copyright 2024 John Lin
+ * @license Apache-2.0
+ */
+
+/**
+ * Components
+ */
+import PageTitle from './components/PageTitle';
+
 const App = () => {
   return (
-    <div>
-      {/* Blue box: visible above 1024px */}
-      <div className='hidden p-10 text-white bg-blue-500 lg:block'>
-        <h1>Visible Above 1024px</h1>
-      </div>
+    <>
+      {/*Meta title*/}
+      <PageTitle title='PHoenix - chat to supercharge your ideas' />
 
-      {/* Red box: visible below 1024px */}
-      <div className='block p-10 text-white bg-red-500 lg:hidden'>
-        <h1>Visible Below 1024px</h1>
+      <div className=''>
+        {/* Sidebar */}
+
+        <div className=''>{/*Top app bar */}</div>
       </div>
-    </div>
+    </>
   );
 };
 
