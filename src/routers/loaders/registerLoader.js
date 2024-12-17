@@ -18,7 +18,7 @@ const registerLoader = async () => {
     //Attempt to retrieve the user's account information
     await account.get();
   } catch (err) {
-    console.log('Error getting user session: ${err.message}');
+    console.log(`Error getting user session: ${err.message}`);
     return null;
   }
 
