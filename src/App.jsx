@@ -32,6 +32,12 @@ const App = () => {
                 Phoenix may occasionally provide inaccurate information,
                 including details about individuals. Please verify all responses
                 for accuracy.
+                <a
+                  href=''
+                  className=''
+                >
+                  Your privacy & Gemini Apps
+                </a>
               </p>
             </div>
           </div>
