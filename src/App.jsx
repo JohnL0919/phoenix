@@ -17,7 +17,25 @@ const App = () => {
       <div className=''>
         {/* Sidebar */}
 
-        <div className=''>{/*Top app bar */}</div>
+        <div className=''>
+          {/*Top app bar */}
+
+          {/* Main content */}
+          <div className=''>
+            <div className=''>
+              <div className=''></div>
+            </div>
+
+            {/* Prompt field */}
+            <div className=''>
+              <p className=''>
+                Phoenix may occasionally provide inaccurate information,
+                including details about individuals. Please verify all responses
+                for accuracy.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
