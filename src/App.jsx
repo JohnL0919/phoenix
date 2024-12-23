@@ -33,7 +33,8 @@ const App = () => {
                 including details about individuals. Please verify all responses
                 for accuracy.
                 <a
-                  href=''
+                  href='https://support.google.com/gemini?p=privacy_notice'
+                  target='_blank'
                   className=''
                 >
                   Your privacy & Gemini Apps
