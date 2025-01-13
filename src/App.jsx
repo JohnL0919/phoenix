@@ -7,6 +7,7 @@
  * Components
  */
 import PageTitle from './components/PageTitle';
+import TopAppBar from './components/TopAppBar';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
 
         <div className=''>
           {/*Top app bar */}
+          <TopAppBar />
 
           {/* Main content */}
           <div className=''>
