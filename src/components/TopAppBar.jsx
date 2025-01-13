@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
  * Components
  */
 import { IconBtn } from './Button';
+import Avatar from './Avatar';
 
 /**
  * Assets
@@ -49,7 +50,9 @@ const TopAppBar = () => {
       </div>
 
       <div className='menu-wrapper'>
-        <IconBtn></IconBtn>
+        <IconBtn>
+          <Avatar />
+        </IconBtn>
       </div>
     </header>
   );
