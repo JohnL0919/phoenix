@@ -6,13 +6,17 @@
 /**
  * Node modules
  */
-import { Link } from 'react-router-dom';
+import { Link, useNavigation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 /**
  * Components
  */
 import { IconBtn } from './Button';
 import Avatar from './Avatar';
+import Menu from './Menu';
+import MenuItem from './MenuItem';
+import { LinearProgress } from './Progress';
 
 /**
  * Assets
@@ -20,9 +24,19 @@ import Avatar from './Avatar';
 import { logoLight, logoDark } from '../assets/assets';
 
 const TopAppBar = () => {
+  // - useNavigation: Provides navigation state (loading, idle, submitting, etc.)
+  const navigation = useNavigation();
+
+  /**
+   * Check if the current navigation state is 'loading' and if there is no form data associated with the navigation.
+   * This condition typically signifies a normal page laod,
+   * where the page is loading for the first time or is being reloaded without submitting a form.
+   */
+  const isNormalLoad = navigation.state === 'loading' && !navigation.formData;
+
   return (
-    <header className=''>
-      <div className=''>
+    <header className='relative flex items-center justify-between h-16 px-4'>
+      <div className='flex gap-1 items-cneter'>
         <IconBtn
           icon='menu'
           title='menu'
@@ -53,7 +67,11 @@ const TopAppBar = () => {
         <IconBtn>
           <Avatar />
         </IconBtn>
+        <Menu>
+          <MenuItem labelText='Log out' />
+        </Menu>
       </div>
+      <AnimatePresence>{isNormalLoad && <LinearProgress />}</AnimatePresence>
     </header>
   );
 };
