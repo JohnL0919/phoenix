@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 const MenuItem = ({ classes = '', labelText, ...rest }) => {
   return (
     <button
-      className={'menu-item ${classes}'}
+      className={`menu-item ${classes}`}
       {...rest}
     >
       <span>{labelText}</span>
