@@ -296,6 +296,15 @@
     @apply bg-light-errorContainer 
     text-light-onErrorContainer;
   }
+
+  /**
+* Icon button 
+*/
+  .icon-btn {
+    --state-layer-bg: theme('colors.light.onSurfaceVariant');
+    @apply text-light-onSurfaceVariant dark:text-dark-onSurfaceVariant grid
+    place-items-center rounded-full h-10 w-10;
+  }
 }
 
 /**
