@@ -305,10 +305,91 @@
     @apply text-light-onSurfaceVariant dark:text-dark-onSurfaceVariant grid
     place-items-center rounded-full h-10 w-10;
   }
+  @media (prefers-colors-scheme: dark) {
+    .icon-btn {
+      --state-layer-bg: theme('colors.dark.onSurfaceVariant');
+    }
+  }
+  .icon-btn:disabled {
+    @apply text-light-onSurfaceVariant/[0.38]
+    dark:text-dark-onSurfaceVariant/[0.38]
+    cursor-not-allowed;
+  }
+
+  .icon-btn.small {
+    @apply w-7 h-7 min-w-7 min-h-7;
+  }
+  .icon-btn.small .icon {
+    @apply text-[18px];
+  }
+  .icon-btn.large {
+    @apply w-12 h-12 min-w-12 min-h-12;
+  }
+
+  /**
+* Avatar
+*/
+  .avatar {
+    @apply aspect-square
+  bg-light-surfaceContainerHighest
+  dark:bg-dark-surfaceContainerHighest
+  min-w-[32px]
+  max-w-[32px]
+  overflow-hidden
+  rounded-full;
+  }
+
+  /**
+* Menu
+*/
+  .menu-wrapper {
+    @apply relative;
+  }
+  .menu {
+    @apply bg-light-surfaceContainer
+  dark:bg-dark-surfaceContainer
+  absolute
+  top-[calc(100%+4px)]
+  right-0
+  min-w-[112px]
+  max-w-[280px]
+  py-2
+  rounded-extraSmall
+  shadow-elevation2
+  z-20
+  origin-top-right
+  scale-75
+  opacity-0
+  invisible
+  transition-[transform,opacity,visibility]
+  duration-short4
+  ease-standard;
+  }
+  .menu.active {
+    @apply scale-100
+    opacity-100
+    visible;
+  }
+  .menu-item {
+    --state-layer-bg: theme('colors.light.onSurface');
+    @apply text-light-onSurface
+    dark:text-dark-onSurface
+    text-labelLarge
+    h-12
+    w-full
+    flex
+    items-center
+    px-3;
+  }
+  @media (prefers-colors-scheme: dark) {
+    .menu-item {
+      --state-layer-bg: theme('colors.dark.onSurfaceVariant');
+    }
+  }
 }
 
 /**
-* utilities
+* Utilities
 */
 @layer utilities {
   .img-box {
@@ -317,5 +398,14 @@
 
   .img-cover {
     @apply w-full h-full object-cover;
+  }
+
+  .material-symbols-rounded {
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+    @apply w-[1em] min-w-[1em] h-[1em] min-h-[1em] overflow-hidden;
   }
 }

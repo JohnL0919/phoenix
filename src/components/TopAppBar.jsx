@@ -40,11 +40,12 @@ const TopAppBar = () => {
         <IconBtn
           icon='menu'
           title='menu'
+          className='lg:hidden'
         />
 
         <Link
           to='/'
-          className=''
+          className='min-w-max max-w-max h-[24px] lg:hidden'
         >
           <img
             src={logoLight}
@@ -67,7 +68,8 @@ const TopAppBar = () => {
         <IconBtn>
           <Avatar />
         </IconBtn>
-        <Menu>
+
+        <Menu className='active'>
           <MenuItem labelText='Log out' />
         </Menu>
       </div>
