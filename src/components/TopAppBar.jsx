@@ -69,7 +69,7 @@ const TopAppBar = () => {
           <Avatar />
         </IconBtn>
 
-        <Menu>
+        <Menu classes=''>
           <MenuItem labelText='Log out' />
         </Menu>
       </div>
