@@ -345,30 +345,17 @@
   .menu-wrapper {
     @apply relative;
   }
-  .menu {
-    @apply bg-light-surfaceContainer
-  dark:bg-dark-surfaceContainer
-  absolute
-  top-[calc(100%+4px)]
-  right-0
-  min-w-[112px]
-  max-w-[280px]
-  py-2
-  rounded-extraSmall
-  shadow-elevation2
-  z-20
-  origin-top-right
-  scale-75
-  opacity-0
-  invisible
-  transition-[transform,opacity,visibility]
-  duration-short4
-  ease-standard;
-  }
   .menu.active {
     @apply scale-100
     opacity-100
     visible;
+  }
+  .menu {
+    @apply bg-light-surfaceContainer dark:bg-dark-surfaceContainer absolute 
+         top-[calc(100%+4px)] right-0 min-w-[112px] max-w-[280px] py-2 
+         rounded-extraSmall shadow-elevation2 z-20 origin-top-right 
+         scale-75 
+         transition-[transform,opacity] duration-short4 ease-standard;
   }
   .menu-item {
     --state-layer-bg: theme('colors.light.onSurface');

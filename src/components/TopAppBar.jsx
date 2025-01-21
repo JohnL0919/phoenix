@@ -12,11 +12,11 @@ import { AnimatePresence } from 'framer-motion';
 /**
  * Components
  */
-import { IconBtn } from './Button';
-import Avatar from './Avatar';
-import Menu from './Menu';
-import MenuItem from './MenuItem';
-import { LinearProgress } from './Progress';
+import { IconBtn } from './Button.jsx';
+import Avatar from './Avatar.jsx';
+import Menu from './Menu.jsx';
+import MenuItem from './MenuItem.jsx';
+import { LinearProgress } from './Progress.jsx';
 
 /**
  * Assets
@@ -69,7 +69,7 @@ const TopAppBar = () => {
           <Avatar />
         </IconBtn>
 
-        <Menu className='active'>
+        <Menu>
           <MenuItem labelText='Log out' />
         </Menu>
       </div>

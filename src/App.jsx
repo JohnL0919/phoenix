@@ -13,7 +13,7 @@ const App = () => {
   return (
     <>
       {/*Meta title*/}
-      <PageTitle title='PHoenix - chat to supercharge your ideas' />
+      <PageTitle title='Phoenix - chat to supercharge your ideas' />
 
       <div className=''>
         {/* Sidebar */}

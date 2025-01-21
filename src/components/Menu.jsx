@@ -17,8 +17,4 @@ Menu.propTypes = {
   children: PropTypes.node,
 };
 
-Menu.defaultProps = {
-  classes: '',
-};
-
 export default Menu;
