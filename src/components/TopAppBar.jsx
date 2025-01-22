@@ -10,6 +10,10 @@ import { Link, useNavigation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 /**
+ * Custom hooks
+ */
+import { useToggle } from '../hooks/useToggle.js';
+/**
  * Components
  */
 import { IconBtn } from './Button.jsx';
@@ -27,6 +31,12 @@ const TopAppBar = () => {
   // - useNavigation: Provides navigation state (loading, idle, submitting, etc.)
   const navigation = useNavigation();
 
+  /**
+   * Use a custom hook to manage the menu's show state.
+   * "showMenu" holds the current state,
+   * and 'setShowMenu' is a function to toggle the menu.
+   */
+  const [showMenu, setShowMenu] = useToggle();
   /**
    * Check if the current navigation state is 'loading' and if there is no form data associated with the navigation.
    * This condition typically signifies a normal page laod,
@@ -65,11 +75,11 @@ const TopAppBar = () => {
       </div>
 
       <div className='menu-wrapper'>
-        <IconBtn>
+        <IconBtn onClick={setShowMenu}>
           <Avatar />
         </IconBtn>
 
-        <Menu classes=''>
+        <Menu classes={showMenu ? 'active' : ''}>
           <MenuItem labelText='Log out' />
         </Menu>
       </div>
