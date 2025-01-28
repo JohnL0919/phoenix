@@ -80,7 +80,7 @@ const TopAppBar = () => {
         </IconBtn>
 
         <Menu classes={showMenu ? 'active' : ''}>
-          <MenuItem labelText='Log out' />
+          <MenuItem labelText='Log out' onClick={} />
         </Menu>
       </div>
       <AnimatePresence>{isNormalLoad && <LinearProgress />}</AnimatePresence>
