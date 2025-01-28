@@ -4,9 +4,6 @@
 /**
  * BASE
  */
-/**
- * BASE
- */
 @layer base {
   @media (max-width: 1023px) {
     .hide-below-lg {
@@ -368,6 +365,12 @@
     items-center
     px-3;
   }
+  .menu-item:hover {
+    @apply bg-light-onSurfaceVariant dark:bg-dark-onSurfaceVariant;
+    transform: scale(0.9); /* Slightly enlarges the item */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0); /* Adds a subtle shadow */
+  }
+
   @media (prefers-colors-scheme: dark) {
     .menu-item {
       --state-layer-bg: theme('colors.dark.onSurfaceVariant');

@@ -6,8 +6,7 @@
 /**
  * Custom modules
  */
-import { account } from '../lib/appwrite';
-
+import { account } from '../../../lib/appwrite';
 /**
  * Logs out the current user by deleting their session and navigates to the login page.
  *
@@ -22,7 +21,7 @@ const logout = async (navigate) => {
   try {
     await account.deleteSession('current');
   } catch (err) {
-    console.log(`Error deleting user session: ${err.message}`);
+    return console.log(`Error deleting user session: ${err.message}`);
   }
 
   return navigate('/');

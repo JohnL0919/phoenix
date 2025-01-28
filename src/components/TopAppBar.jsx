@@ -6,8 +6,13 @@
 /**
  * Node modules
  */
-import { Link, useNavigation } from 'react-router-dom';
+import { Link, useNavigation, useNavigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+
+/**
+ * Custom modules
+ */
+import logout from '../routers/actions/utils/logout.js';
 
 /**
  * Custom hooks
@@ -26,10 +31,12 @@ import { LinearProgress } from './Progress.jsx';
  * Assets
  */
 import { logoLight, logoDark } from '../assets/assets';
-
 const TopAppBar = () => {
   // - useNavigation: Provides navigation state (loading, idle, submitting, etc.)
   const navigation = useNavigation();
+
+  // - useNavigate: Function for programmatically navigating between routes.
+  const navigate = useNavigate();
 
   /**
    * Use a custom hook to manage the menu's show state.
@@ -80,7 +87,10 @@ const TopAppBar = () => {
         </IconBtn>
 
         <Menu classes={showMenu ? 'active' : ''}>
-          <MenuItem labelText='Log out' onClick={} />
+          <MenuItem
+            labelText='Log out'
+            onClick={() => logout(navigate)}
+          />
         </Menu>
       </div>
       <AnimatePresence>{isNormalLoad && <LinearProgress />}</AnimatePresence>
